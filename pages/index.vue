@@ -1,5 +1,7 @@
-<template>
+<template lang="html">
   <section class="viewport content">
+    <twitter-head-card></twitter-head-card>
+    <open-graph></open-graph>
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -35,17 +37,31 @@
           <button type="button" name="button" class="button button-primary">Check</button>
         </div>
       </div>
-
-
     </div>
-
-
-
-
-
   </section>
 </template>
 
-<style scoped>
+<script>
+import TwitterHeadCard from '~components/twitter-head-card.vue'
+import OpenGraph from '~components/open-graph.vue'
 
+export default {
+  head () {
+    return {
+      title: 'Контакты для связи - Кардинг в онлайн-покере',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Custom description on page' }
+      ],
+      link: [
+        { rel: 'canonical', href: 'http://example.com' }
+      ]
+    }
+  },
+  components: {
+    TwitterHeadCard, OpenGraph
+  }
+}
+</script>
+
+<style lang="css">
 </style>

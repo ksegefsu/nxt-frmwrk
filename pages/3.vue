@@ -1,5 +1,7 @@
 <template lang="html">
-  <h2>Test</h2>
+  <section class="viewport content">
+    <h2>Test</h2>
+  </section>
 </template>
 
 <script>
