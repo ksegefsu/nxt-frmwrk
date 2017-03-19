@@ -111,16 +111,16 @@ export default {
 
 .info {
   // margin: 0;
-  margin-top: 1.5em;
+  // margin-top: 1.5em;
   h2 {
     font-size: 3em;
     text-transform: uppercase;
     // color:#FF851B;
     letter-spacing: 2px;
-    margin: 0;
+    // margin: 0;
   }
   p {
-    margin: 0;
+    // margin: 0;
     font-size: 0.8em;
     opacity: 0.6;
   }

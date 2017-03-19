@@ -32,10 +32,22 @@ export default {
 .content {
   margin-top: 44px;
 }
-@media screen and (min-width: 64em) {
+@media only screen and (min-width: 48em) {
+  .content {
+    margin-top: 88px;
+  }
+}
+@media only screen and (min-width: 64em) {
   .container {
     font-size: 18px;
   }
+  .content {
+    margin-top: 44px;
+    // padding-top: 22px;
+  }
+}
+@media only screen and (min-width: 75em) {
+  
 }
 .viewport {
   flex: 1;
