@@ -48,7 +48,7 @@ import OpenGraph from '~components/open-graph.vue'
 export default {
   head () {
     return {
-      title: 'Контакты для связи - Кардинг в онлайн-покере',
+      title: 'Главная страница - Сайт',
       meta: [
         { hid: 'description', name: 'description', content: 'Custom description on page' }
       ],

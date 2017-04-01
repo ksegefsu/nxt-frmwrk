@@ -47,7 +47,7 @@ export default {
   }
 }
 @media only screen and (min-width: 75em) {
-  
+
 }
 .viewport {
   flex: 1;

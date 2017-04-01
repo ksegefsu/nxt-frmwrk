@@ -9,7 +9,7 @@
             </button>
           </div>
 
-          <nuxt-link to="/" class="logo">
+          <nuxt-link to="/" class="logo" title="Company Name">
 
         </nuxt-link>
 
@@ -59,10 +59,10 @@ export default {
     toggleActive: function () {
       this.isActive = !this.isActive
       this.activeOverlay = !this.activeOverlay
-    },
-    toggleOverlay: function () {
-      this.activeOverlay = !this.activeOverlay
     }
+    // toggleOverlay: function () {
+    //   this.activeOverlay = !this.activeOverlay
+    // }
   }
 }
 </script>
@@ -77,8 +77,9 @@ header {
   width: 100%;
   z-index: 999;
   background: white;
-  border-bottom: 1px solid rgba(61, 62, 74, 0.44);
-  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+  // border-bottom: 1px solid rgba(61, 62, 74, 0.44);
+  // box-shadow: 0px 5px 39px -17px rgba(0,0,0,0.4);
+  box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.4);
 }
 .row {
   padding: 0 1rem;
@@ -130,7 +131,7 @@ header {
   border: none;
   cursor: pointer;
   // background: red;
-  // transition: background 0.6s;
+  transition: background 0.2s;
 }
 .c-hamburger:focus {
   outline: none;
@@ -168,18 +169,18 @@ header {
   background-color: transparent;
 }
 .c-hamburger--htx span {
-  transition: background 0s 0.4s;
+  transition: background 0s 0.2s;
 }
 .c-hamburger--htx span::before,
 .c-hamburger--htx span::after {
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
+  transition-duration: 0.2s, 0.2s, 0.2s;
+  transition-delay: 0.2s, 0s, 0s;
 }
 .c-hamburger--htx span::before {
-  transition-property: top, transform;
+  transition-property: top, transform, background-color;
 }
 .c-hamburger--htx span::after {
-  transition-property: bottom, transform;
+  transition-property: bottom, transform, background-color;
 }
 /* active state, i.e. menu open */
 .c-hamburger--htx.is-active {
@@ -187,7 +188,7 @@ header {
 }
 .c-hamburger--htx.is-active span {
   background: none;
-  transition: background 0s 0.2s;
+  // transition: background 0s 0s;
 }
 .c-hamburger--htx.is-active span::before {
   top: 0;
@@ -243,16 +244,28 @@ header {
 
 .menu {
   display: none; // disable navigation on mobile
+  width: 100%;
 }
 
 .menu-list {
   padding: 0;
   margin: 0;
   list-style: none;
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .menu {
+    width: auto;
+  }
+  .menu-list {
+    width: auto;
+  }
 }
 
 .menu-item {
   line-height: 1rem;
+  flex:1 ;
 }
 
 .menu-link {
@@ -262,6 +275,7 @@ header {
   color: orange;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   white-space: nowrap;
   transition: all 0.2s;
   &:hover {

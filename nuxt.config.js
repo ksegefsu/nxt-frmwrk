@@ -5,7 +5,8 @@ module.exports = {
   head: {
     htmlAttrs: {
       foo: 'bar',
-      amp: undefined
+      amp: undefined,
+      lang: 'ru'
     },
     title: 'nuxt-framework',
     meta: [
@@ -16,11 +17,12 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       { rel: 'dns-prefetch', href: '//twemoji.maxcdn.com' },
       { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: '//www.google-analytics.com' },
-      { href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800&amp;subset=cyrillic', rel: 'stylesheet' }
+      { rel: 'dns-prefetch', href: '//www.google-analytics.com' }
+      // { href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800&amp;subset=cyrillic', rel: 'stylesheet' }
     ],
     script: [
       // { src: 'http://use.edgefonts.net/source-sans-pro.js' }
