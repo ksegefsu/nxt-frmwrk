@@ -13,3 +13,6 @@ margin-left
 
 .container:
 width to max-width
+
+#
+http://realfavicongenerator.net

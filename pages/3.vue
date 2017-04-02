@@ -3,7 +3,15 @@
     <twitter-head-card></twitter-head-card>
     <open-graph></open-graph>
     <div class="container">
-      <h2>Test</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Test</h2>
+          <figure>
+            <img src="http://ink.sapo.pt/assets/img/examples/tiny/field.jpg" alt="">
+            <figcaption>Some random text here.</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 </template>

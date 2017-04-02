@@ -1,0 +1,113 @@
+//
+// FORMS
+//
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+//
+//
+//
+
+//
+//
+//
+form {
+  // background-color: rgb(209, 209, 209);
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 1em auto;
+  padding: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  // background-color: red;
+}
+label {
+  display: block;
+}
+textarea {
+  resize: vertical;
+  overflow: overlay;
+}
+input[type="text"],
+// input:not([type]),
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  // background: rgba(255,255,255,0.1);
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 1em;
+  width: 100%;
+  background-color: white;
+  color: black;
+  // box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 1em;
+  user-select: none;
+  transition: border-color 0.3s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+  border-color: orange;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 1em;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none; // or background-color: inherit;
+}
+
+.radio-label {
+  display: inline-block;
+}

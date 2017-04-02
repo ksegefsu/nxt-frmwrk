@@ -396,7 +396,7 @@ header {
           transform: translateX(-50%);
           height: 4px;
           background: white;
-          transition: .35s;
+          transition: .15s;
         }
       }
     }

@@ -5,7 +5,13 @@
       <legend align="center">Credentials</legend>
 
       <label for="username">Username</label>
-      <input id="username" type="text" name="user_name" placeholder="Username" required autofocus>
+      <input id="username" type="text" name="user_name" placeholder="Username" required autofocus list="username_datalist">
+      <datalist id="username_datalist">
+        <option value="Vasya"></option>
+        <option value="John"></option>
+        <option value="Petya"></option>
+        <option value="Adolf"></option>
+      </datalist>
 
       <label for="password">Password</label>
       <input id="password" type="password" name="user_password" placeholder="Password">
@@ -50,75 +56,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-form {
-  // background-color: rgb(209, 209, 209);
-  border-radius: 5px;
-  max-width: 500px;
-  margin: 1em auto;
-  padding: 0;
-}
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  // background-color: red;
-}
-label {
-  display: block;
-}
-textarea {
-  resize: vertical;
-}
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea,
-select {
-  // background: rgba(255,255,255,0.1);
-  border: 1px solid gray;
-  border-radius: 3px;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
-  outline: 0;
-  padding: 1em;
-  width: 100%;
-  background-color: white;
-  color: black;
-  // box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 1em;
-  user-select: none;
-}
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-textarea:focus,
-select:focus {
-  outline: 0;
-  border-color: orange;
-}
+<style lang="scss" scoped>
 
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 0 1em;
-}
-
-.radio-label {
-  display: inline-block;
-}
 </style>

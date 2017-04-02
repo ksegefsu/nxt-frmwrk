@@ -3,31 +3,53 @@
     <twitter-head-card></twitter-head-card>
     <open-graph></open-graph>
     <div class="container">
-      <h2>Test</h2>
-      <gmap-map
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Test</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <!-- <gmap-map
         :center="{lat:50, lng:30}"
         :zoom="7"
         map-type-id="terrain"
-        style="width: auto; height: 300px"
-      ></gmap-map>
+        style="display: block; width: auto; height: 300px"
+      ></gmap-map> -->
+      <google-map></google-map>
     </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+    </div>
+    <!-- <form>
+      <input type="text" name="" value="">
+    </form> -->
+
+
   </section>
 </template>
 
 <script>
 import TwitterHeadCard from '~components/twitter-head-card.vue'
 import OpenGraph from '~components/open-graph.vue'
+import GoogleMap from '~components/google-map.vue'
 
-import Vue from 'vue'
-
-if (process.browser) {
-  const VueGoogleMaps = require('vue2-google-maps')
-  Vue.use(VueGoogleMaps, {
-    load: {
-      key: 'AIzaSyB3QqohnQsS6SLbLLDxzLAvH0XaEbIwY20'
-    }
-  })
-}
+// import Vue from 'vue'
+//
+// if (process.browser) {
+//   const VueGoogleMaps = require('vue2-google-maps')
+//   Vue.use(VueGoogleMaps, {
+//     load: {
+//       key: 'AIzaSyB3QqohnQsS6SLbLLDxzLAvH0XaEbIwY20'
+//     }
+//   })
+// }
 
 export default {
   head () {
@@ -42,10 +64,14 @@ export default {
     }
   },
   components: {
-    TwitterHeadCard, OpenGraph
+    TwitterHeadCard, OpenGraph, GoogleMap
   }
 }
 </script>
 
-<style lang="css">
+<style lang="scss"scoped>
+
+h2 {
+  color: red;
+}
 </style>

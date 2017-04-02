@@ -10,6 +10,12 @@
     "twemoji": "^2.2.5",
     "vue2-google-maps": "^0.7.1"
   },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.2",
+      "port": "3333"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
