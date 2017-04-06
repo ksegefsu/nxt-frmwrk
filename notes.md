@@ -14,5 +14,15 @@ margin-left
 .container:
 width to max-width
 
-#
-http://realfavicongenerator.net
+# favicon
+realfavicongenerator.net
+xiconeditor.com
+github.com/audreyr/favicon-cheat-sheet
+teamtreehouse.com/how-to-make-a-favicon
+
+# Data URL, Base64 Encoder
+1-4KB
+dataurl.net
+jpillora.com/base64-encoder
+
+# Sprites

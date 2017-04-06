@@ -10,6 +10,7 @@ module.exports = {
     },
     title: 'nuxt-framework',
     meta: [
+      // { content: 'IE=edge', 'http-equiv': 'X-UA-Compatible' },
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' },
@@ -29,7 +30,7 @@ module.exports = {
       // { href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800&amp;subset=cyrillic', rel: 'stylesheet' }
     ],
     script: [
-      // { src: 'http://use.edgefonts.net/source-sans-pro.js' }
+      // { src: 'js/blur-image.js' }
     ]
   },
   /*
@@ -47,12 +48,16 @@ module.exports = {
   ** Plugins (GA etc)
   */
   plugins: [
-    '~plugins/ga.js'
+    '~plugins/ga.js',
+    {src: '~plugins/vue-lazyload', ssr: false}
   ],
   /*
   ** Build configuration
   */
   build: {
+    vendor: [
+      'vue-lazyload'
+    ],
     /*
     ** Run ESLINT on save
     */

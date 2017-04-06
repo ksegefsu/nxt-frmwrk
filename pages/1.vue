@@ -7,7 +7,7 @@
         <div class="col-xs-12">
 
           <h2>Test</h2>
-          
+
           <forms></forms>
 
         </div>
@@ -22,6 +22,7 @@ import OpenGraph from '~components/open-graph.vue'
 import Forms from '~components/Forms.vue'
 
 export default {
+  scrollToTop: false,
   head () {
     return {
       title: 'Главная страница - Сайт',

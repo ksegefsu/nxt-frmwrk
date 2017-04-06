@@ -12,7 +12,7 @@ export default {
 <style lang="scss">
 footer
 {
-  margin-top: 1em;
+  // margin-top: 1em;
   padding: 1em;
   text-align: center;
   border-top: 1px solid #ddd;
