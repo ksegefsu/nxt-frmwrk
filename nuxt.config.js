@@ -30,7 +30,7 @@ module.exports = {
       // { href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800&amp;subset=cyrillic', rel: 'stylesheet' }
     ],
     script: [
-      // { src: 'js/blur-image.js' }
+      // { src: 'https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.7.3/jarallax.min.js' }
     ]
   },
   /*
@@ -49,6 +49,10 @@ module.exports = {
   */
   plugins: [
     '~plugins/ga.js',
+    '~plugins/vue2-scrollspy',
+    // {src: '~plugins/vue-parallaxy', ssr: false},
+    // {src: '~plugins/vue-parallax-js', ssr: false},
+    {src: '~plugins/vue-scrollto', ssr: false},
     {src: '~plugins/vue-lazyload', ssr: false}
   ],
   /*

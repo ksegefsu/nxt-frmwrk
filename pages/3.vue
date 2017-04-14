@@ -4,7 +4,7 @@
     <open-graph></open-graph>
 
           <div class="fullpage">
-            <h1>Text<br>Here</h1>
+            <h1 v-parallax="0.3">Text<br>Here</h1>
           </div>
 
   </section>

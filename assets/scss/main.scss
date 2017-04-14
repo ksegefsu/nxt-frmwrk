@@ -25,11 +25,13 @@ body {
   margin: 0;
   background-color: $white;
   color: $black;
-  font-family: 'Open Sans', monospace;
+  font-family: 'Ubuntu', monospace;
   font-weight: 400;
   line-height: 1.618; // 1.618 1.45
   /*letter-spacing: 0.5px;*/
+
 }
+
 
 //
 // IMAGES
@@ -50,6 +52,7 @@ figcaption {
 
 img {
   border-style: none;
+  width: 100%;
   max-width: 100%;
   height: auto;
   // display: block;
