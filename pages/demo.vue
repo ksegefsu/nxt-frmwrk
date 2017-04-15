@@ -1,5 +1,8 @@
 <template>
+  <section class="viewport content">
     <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
         <ul class="menu">
             <li :class="{active:scrollPos == 0}">
                 <a>Ludwig van Beethoven</a>
@@ -46,26 +49,10 @@
             </div>
         </div>
     </div>
+    </div>
+    </div>
+  </section>
 </template>
-<style>
-    .container {
-        display: flex;
-    }
-    .menu {
-        flex: 1;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-    }
-    .main {
-        flex: 9;
-        margin-left: 250px;
-        font-size: 25px;
-    }
-    .active a {
-        color: red
-    }
-</style>
 <script>
     export default{
       data () {
@@ -84,3 +71,9 @@
       }
     }
 </script>
+
+<style>
+    .active a {
+        color: red
+    }
+</style>

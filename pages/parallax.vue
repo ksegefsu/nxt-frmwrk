@@ -5,7 +5,7 @@
     </h1>
 
     <div id="skrollr-body">
-		spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>
+		spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>
 		<div id="foo" data-0="background-color:rgb(0,0,255);" data-500="background-color:rgb(255,0,0);">WOOOT</div>
 	</div>
 
@@ -15,15 +15,16 @@
 </template>
 
 <script>
-const skrollr = (process.BROWSER_BUILD) ? require('skrollr') : { init () { console.log('empty skrollr') } }
-let s
+// const skrollr = (process.BROWSER_BUILD) ? require('skrollr') : { init () { console.log('empty skrollr') } }
+// let s
+import Vue from 'vue'
 
 export default {
   mounted () {
-    s = skrollr.init()
+    Vue.Skrollr.init()
   },
   beforeDestroy () {
-    s.destroy()
+    Vue.Skrollr.destroy()
   }
 }
 </script>

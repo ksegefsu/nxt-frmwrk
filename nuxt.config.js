@@ -50,8 +50,8 @@ module.exports = {
   plugins: [
     '~plugins/ga.js',
     '~plugins/vue2-scrollspy',
-    // {src: '~plugins/vue-parallaxy', ssr: false},
-    // {src: '~plugins/vue-parallax-js', ssr: false},
+    {src: '~plugins/skrollr', ssr: false},
+    {src: '~plugins/vue-parallax-js', ssr: false},
     {src: '~plugins/vue-scrollto', ssr: false},
     {src: '~plugins/vue-lazyload', ssr: false}
   ],
@@ -60,7 +60,8 @@ module.exports = {
   */
   build: {
     vendor: [
-      'vue-lazyload'
+      'vue-lazyload',
+      'skrollr'
     ],
     /*
     ** Run ESLINT on save

@@ -2,9 +2,12 @@
   <section class="viewport content">
     <twitter-head-card></twitter-head-card>
     <open-graph></open-graph>
-
+    <div id="skrollr-body">
+		spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>
+		<div id="foo" data-0="background-color:rgb(0,0,255);" data-500="background-color:rgb(255,0,0);">WOOOT</div>
+	  </div>
           <div class="fullpage">
-            <h1 v-parallax="0.3">Text<br>Here</h1>
+            <h1 v-parallax.absY="0.2">Text<br>Here</h1>
           </div>
 
   </section>
@@ -13,6 +16,8 @@
 <script>
 import TwitterHeadCard from '~components/twitter-head-card.vue'
 import OpenGraph from '~components/open-graph.vue'
+const skrollr = (process.BROWSER_BUILD) ? require('skrollr') : { init () { console.log('empty skrollr') } }
+let s
 
 export default {
   head () {
@@ -25,6 +30,12 @@ export default {
         { rel: 'canonical', href: 'http://example.com' }
       ]
     }
+  },
+  mounted () {
+    s = skrollr.init()
+  },
+  beforeDestroy () {
+    s.destroy()
   },
   components: {
     TwitterHeadCard, OpenGraph
