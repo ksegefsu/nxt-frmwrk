@@ -22,6 +22,13 @@ var em = function () {
 em()
 
 export default {
+  head () {
+    return {
+      script: [
+        // { src: 'https://code.getmdl.io/1.3.0/material.min.js' }
+      ]
+    }
+  },
   components: {
     MyHeader, MyFooter
   }

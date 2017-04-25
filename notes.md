@@ -3,7 +3,7 @@ npm i
 
 # flexboxgrid
 npm i
-npm install -g grunt-cli
+sudo npm install -g grunt-cli
 
 .row turn-off:
 margin-right
@@ -13,6 +13,12 @@ margin-left
 
 .container:
 width to max-width
+
+# material-design-lite
+npm install material-design-lite --save
+sudo npm install gulp-cli -g
+
+turn off unnecessary code
 
 # favicon
 realfavicongenerator.net

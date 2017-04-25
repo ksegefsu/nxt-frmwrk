@@ -32,7 +32,7 @@ module.exports = {
       // { href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800&amp;subset=cyrillic', rel: 'stylesheet' }
     ],
     script: [
-      // { src: 'https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.7.3/jarallax.min.js' }
+      // { src: 'https://code.getmdl.io/1.3.0/material.min.js' }
     ]
   },
   /*
@@ -40,6 +40,7 @@ module.exports = {
   */
   css: [
     {src: '~assets/scss/main.scss', lang: 'scss'},
+    'material-design-lite/dist/material.min.css',
     'flexboxgrid/dist/flexboxgrid.min.css'
   ],
   /*
@@ -53,6 +54,7 @@ module.exports = {
     '~plugins/ga.js',
     '~plugins/vue2-scrollspy',
     {src: '~plugins/skrollr', ssr: false},
+    {src: '~plugins/mdl', ssr: false},
     {src: '~plugins/vue-scrollto', ssr: false},
     {src: '~plugins/scrolltotop', ssr: false }
   ],
