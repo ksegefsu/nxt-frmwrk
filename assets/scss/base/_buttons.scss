@@ -6,11 +6,6 @@ button,
 input {
   overflow: visible;
 }
-// .button,
-// button,
-// select {
-//   text-transform: none;
-// }
 
 button,
 html [type="button"],
@@ -34,8 +29,6 @@ button:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-
-
 
 .button,
 button,

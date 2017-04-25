@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h2>Test</h2>
+          <h2>Test Test Test Test Test Test Test Test Test Test</h2>
         </div>
       </div>
     </div>
@@ -25,28 +25,22 @@
 
 
 
-    <!-- <div ref="container"> -->
-     <img v-lazy="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
-     <!-- <div v-lazy:background-image="imgUrl"></div>
-    </div>
-    <div ref="container"> -->
-     <img v-lazy="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
-     <!-- <div v-lazy:background-image="imgUrl"></div>
-    </div>
-    <div ref="container"> -->
-     <img v-lazy="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
-     <!-- <div v-lazy:background-image="imgUrl"></div>
-    </div>
-    <div ref="container"> -->
-     <img v-lazy="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
-     <!-- <div v-lazy:background-image="imgUrl"></div> -->
+<!--
+     <img v-lazyload="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
+
+     <img v-lazyload="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
+
+     <img v-lazyload="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
+
+     <img v-lazyload="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
+
 
      <figure class="ink-image bottom-space">
-       <img v-lazy="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
+       <img v-lazyload="src"/>
        <figcaption class="over-bottom">
          This a caption over the top of the image.
        </figcaption>
-     </figure>
+     </figure> -->
     </div>
 
   </section>
@@ -56,7 +50,13 @@
 import TwitterHeadCard from '~components/twitter-head-card.vue'
 import OpenGraph from '~components/open-graph.vue'
 import GoogleMap from '~components/google-map.vue'
-
+// import Vue from 'vue'
+// import Lazyload from 'vue-lazyload-img'
+// Vue.use(Lazyload, {
+//   fade: true,
+//   speed: 20,
+//   time: 300
+// })
 // import Vue from 'vue'
 //
 // if (process.browser) {
@@ -82,11 +82,7 @@ export default {
   },
   data () {
     return {
-      showMap: false,
-      imgObj: {
-        src: 'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'
-      },
-      imgUrl: 'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'
+      showMap: false
     }
   },
   mounted () {
@@ -106,8 +102,8 @@ h2 {
 }
 
 img {
-  // width: 100%;
-  // height: auto;
+  width: 100%;
+  height: auto;
 }
 img[lazy=loaded] {
   -webkit-animation-duration: 2s;

@@ -6,7 +6,15 @@
       <div class="row">
         <div class="col-xs-12">
 
-          <h2>Test</h2>
+          <!-- <h2>{{title}}</h2> -->
+
+          <ul>
+            <li v-for="jew in jews">{{jew.name}}</li>
+          </ul>
+
+          <ul>
+            <li v-for="goym in goyms">{{goym.name}}</li>
+          </ul>
 
           <forms></forms>
 
@@ -20,8 +28,18 @@
 import TwitterHeadCard from '~components/twitter-head-card.vue'
 import OpenGraph from '~components/open-graph.vue'
 import Forms from '~components/Forms.vue'
+import axios from 'axios'
 
 export default {
+  asyncData ({ params }) {
+    return axios.get(`http://localhost:8080/api`)
+    .then((res) => {
+      return {
+        jews: res.data.jews,
+        goyms: res.data.goyms
+      }
+    })
+  },
   scrollToTop: false,
   head () {
     return {

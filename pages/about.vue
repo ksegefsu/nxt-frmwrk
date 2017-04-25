@@ -19,6 +19,7 @@ import OpenGraph from '~components/open-graph.vue'
 import MyPricing from '~components/Pricing.vue'
 
 export default {
+  transition: 'scale',
   head () {
     return {
       title: 'Главная страница - Сайт',

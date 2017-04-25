@@ -2,12 +2,28 @@
   <section class="viewport content">
     <twitter-head-card></twitter-head-card>
     <open-graph></open-graph>
+    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" viewBox="0 0 744.09 1052.36" height="297" width="210">
+      <defs id="defs4"/>
+      <metadata id="metadata7">
+        <rdf:RDF>
+          <cc:Work rdf:about="">
+            <dc:format>
+              image/svg+xml
+            </dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+      <g id="layer1">
+        <path id="path3344" d="m32.54 628.92 643.59 0-294.21-532.55z" style="fill:none;stroke-width:2.19;stroke:#000"/>
+      </g>
+    </svg>
     <div id="skrollr-body">
 		spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>spacer<br>
 		<div id="foo" data-0="background-color:rgb(0,0,255);" data-500="background-color:rgb(255,0,0);">WOOOT</div>
 	  </div>
           <div class="fullpage">
-            <h1 v-parallax.absY="0.2">Text<br>Here</h1>
+            <h1>Text<br>Here</h1>
           </div>
 
   </section>

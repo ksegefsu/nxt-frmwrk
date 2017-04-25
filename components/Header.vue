@@ -20,6 +20,7 @@
               <li class="menu-item"><nuxt-link class="menu-link" to="/1">Page One</nuxt-link></li>
               <li class="menu-item"><nuxt-link class="menu-link" to="/2">Page Two</nuxt-link></li>
               <li class="menu-item"><nuxt-link class="menu-link" to="/3">Page Three</nuxt-link></li>
+              <li class="menu-item"><nuxt-link class="menu-link" to="/posts">Posts</nuxt-link></li>
             </ul>
           </nav>
 
@@ -77,7 +78,7 @@ header {
   width: 100%;
   z-index: 999;
   background: white;
-  // border-bottom: 1px solid rgba(61, 62, 74, 0.44);
+  border-bottom: 1px solid rgba(206, 206, 206, 0.44);
   // box-shadow: 0px 5px 39px -17px rgba(0,0,0,0.4);
   box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.4);
 }
@@ -353,7 +354,7 @@ header {
     // transform: translateY(-50%);
     font-size: 3.157rem;
     // line-height: 4rem;
-    font-family: sans-serif;
+    font-family: 'Ubuntu', monospace;
     font-weight: 400;
     text-align: center;
   }

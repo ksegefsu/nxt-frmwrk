@@ -1,7 +1,7 @@
 <template>
   <section class="viewport content">
     <div class="container center-xs">
-      <img src="../assets/img/star.svg" alt="nuxt-framework" />
+      <img src="https://media.giphy.com/media/9izRS7GBXCoA8/giphy.gif" alt="nuxt-framework" />
       <h1 class="title">
         {{ error.statusCode }}
       </h1>
@@ -35,5 +35,10 @@ export default {
 .button
 {
   margin-top: 50px;
+}
+
+img {
+  margin-top: 2em; 
+  width: auto;
 }
 </style>

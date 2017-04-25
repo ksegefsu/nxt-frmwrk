@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -51,16 +53,23 @@ module.exports = {
     '~plugins/ga.js',
     '~plugins/vue2-scrollspy',
     {src: '~plugins/skrollr', ssr: false},
-    {src: '~plugins/vue-parallax-js', ssr: false},
     {src: '~plugins/vue-scrollto', ssr: false},
-    {src: '~plugins/vue-lazyload', ssr: false}
+    {src: '~plugins/scrolltotop', ssr: false }
   ],
+  /*
+  ** Router
+  */
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: false, y: false }
+    }
+  },
   /*
   ** Build configuration
   */
   build: {
     vendor: [
-      'vue-lazyload',
+      'axios',
       'skrollr'
     ],
     /*
@@ -80,6 +89,14 @@ module.exports = {
   generate: {
     minify: {
       removeRedundantAttributes: false
+    },
+    routes: function () {
+      return axios.get(`https://jsonplaceholder.typicode.com/posts/`)
+      .then((res) => {
+        return res.data.map((post) => {
+          return '/posts/' + post.id
+        })
+      })
     }
   }
 }
