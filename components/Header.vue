@@ -1,5 +1,5 @@
 <template lang="html">
-  <header>
+  <header :class="{'headroom--unpinned': scrolled}"  @scroll="handleScroll" class="headroom">
     <div class="container">
       <div class="row">
 
@@ -52,18 +52,44 @@ export default {
   data () {
     return {
       isActive: false,
-      activeOverlay: false
-
+      activeOverlay: false,
+      limitPosition: 500,
+      scrolled: false,
+      lastPosition: 0
     }
   },
   methods: {
     toggleActive: function () {
       this.isActive = !this.isActive
       this.activeOverlay = !this.activeOverlay
+    },
+    handleScroll: function () {
+      if (!this.activeOverlay && this.lastPosition < window.scrollY && this.limitPosition < window.scrollY) {
+        this.scrolled = true
+        // move up!
+      }
+
+      if (this.lastPosition > window.scrollY) {
+        this.scrolled = false
+        // move down
+      }
+
+      this.lastPosition = window.scrollY
     }
-    // toggleOverlay: function () {
-    //   this.activeOverlay = !this.activeOverlay
-    // }
+  },
+  created () {
+    if (process.BROWSER_BUILD) {
+      // window.onNuxtReady(() => {
+      window.addEventListener('scroll', this.handleScroll)
+      // })
+    }
+  },
+  destroyed () {
+    if (process.BROWSER_BUILD) {
+      // window.onNuxtReady(() => {
+      window.removeEventListener('scroll', this.handleScroll)
+      // })
+    }
   }
 }
 </script>
@@ -82,6 +108,19 @@ header {
   // box-shadow: 0px 5px 39px -17px rgba(0,0,0,0.4);
   box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.4);
 }
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+
+
 .row {
   padding: 0 1rem;
 }
@@ -312,7 +351,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   opacity: 0;
   visibility: hidden;
   transform: scale(0);
@@ -326,7 +365,7 @@ header {
     opacity: .9;
     visibility: visible;
     transform: scale(1);
-    height: 100%;
+    height: 100vh;
 
     li {
       animation: fadeInRight .5s ease forwards;

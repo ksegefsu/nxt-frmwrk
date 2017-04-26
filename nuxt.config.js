@@ -41,6 +41,7 @@ module.exports = {
   css: [
     {src: '~assets/scss/main.scss', lang: 'scss'},
     'material-design-lite/dist/material.min.css',
+    'progressive-image/dist/index.css',
     'flexboxgrid/dist/flexboxgrid.min.css'
   ],
   /*
@@ -55,6 +56,8 @@ module.exports = {
     '~plugins/vue2-scrollspy',
     {src: '~plugins/skrollr', ssr: false},
     {src: '~plugins/mdl', ssr: false},
+    {src: '~plugins/vodal', ssr: false},
+    {src: '~plugins/progressive-image', ssr: false},
     {src: '~plugins/vue-scrollto', ssr: false},
     {src: '~plugins/scrolltotop', ssr: false }
   ],

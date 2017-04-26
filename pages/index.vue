@@ -5,14 +5,16 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-            Button
-          </button>
+          <nuxt-link to="/about">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+              Button
+            </button>
+          </nuxt-link>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
             <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
             <span class="mdl-checkbox__label">Checkbox</span>
           </label>
+
 
           <h1 class="">One Morning, When Gregor Samsa Woke</h1>
           <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
@@ -55,6 +57,10 @@ import TwitterHeadCard from '~components/twitter-head-card.vue'
 import OpenGraph from '~components/open-graph.vue'
 
 export default {
+  data () {
+    return {
+    }
+  },
   head () {
     return {
       title: 'Главная страница - Сайт',

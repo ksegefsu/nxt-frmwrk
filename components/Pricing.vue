@@ -19,7 +19,7 @@
         <li>Kind of a bummer</li>
       </ul>
 
-      <a href="#" class="cta">Really?</a>
+      <a href="#" class="cta mdl-js-button mdl-js-ripple-effect">Really?</a>
 
     </div>
 
@@ -45,7 +45,7 @@
 
 
 
-      <a href="#" class="cta">Best Deal</a>
+      <a href="#" class="cta mdl-js-button mdl-js-ripple-effect">Best Deal</a>
     </div>
 
     <div class="plans plan3">
@@ -70,7 +70,7 @@
 
 
 
-      <a href="#" class="cta">Gimme</a>
+      <a href="#" class="cta mdl-js-button mdl-js-ripple-effect">Gimme</a>
     </div>
 
   </div>
@@ -78,6 +78,9 @@
 
 <script>
 export default {
+  mounted () {
+    window.componentHandler.upgradeDom()
+  }
 }
 </script>
 
@@ -163,6 +166,7 @@ export default {
   }
 }
 .plans .cta {
+  position: relative;
   display: block;
   // margin-top: 3em;
   padding: 1em 0em;

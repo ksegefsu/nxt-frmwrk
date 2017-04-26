@@ -24,7 +24,6 @@
 
 
 
-
 <!--
      <img v-lazyload="'https://cdn-images-1.medium.com/max/1000/1*27_54ufzBoYXilrq_a6ChA.jpeg'"/>
 

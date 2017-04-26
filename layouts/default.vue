@@ -1,10 +1,14 @@
 <template>
-  <div class="flexstick">
-    <div class="warning"></div>
+  <div class="">
     <my-header/>
-    <nuxt/>
-    <my-footer/>
+    <div class="flexstick">
+      <div class="warning"></div>
+
+      <nuxt/>
+      <my-footer/>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -46,7 +50,7 @@ export default {
 }
 @media only screen and (min-width: 64em) {
   .container {
-    font-size: 18px;
+    // font-size: 18px;
   }
   .content {
     margin-top: 44px;
