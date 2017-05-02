@@ -32,7 +32,7 @@ module.exports = {
       // { href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800&amp;subset=cyrillic', rel: 'stylesheet' }
     ],
     script: [
-      // { src: 'https://code.getmdl.io/1.3.0/material.min.js' }
+      // { src: 'https://cdn.jsdelivr.net/walkway/0.0.7/walkway.min.js' }
     ]
   },
   /*
@@ -41,7 +41,6 @@ module.exports = {
   css: [
     {src: '~assets/scss/main.scss', lang: 'scss'},
     'material-design-lite/dist/material.min.css',
-    'progressive-image/dist/index.css',
     'flexboxgrid/dist/flexboxgrid.min.css'
   ],
   /*
@@ -54,10 +53,11 @@ module.exports = {
   plugins: [
     '~plugins/ga.js',
     '~plugins/vue2-scrollspy',
-    {src: '~plugins/skrollr', ssr: false},
+    // {src: '~plugins/skrollr', ssr: false},
     {src: '~plugins/mdl', ssr: false},
-    {src: '~plugins/vodal', ssr: false},
-    {src: '~plugins/progressive-image', ssr: false},
+    // {src: '~plugins/sticky', ssr: false},
+    {src: '~plugins/vue-chartsjs.js', ssr: false},
+    {src: '~plugins/vue-progressive-image', ssr: false},
     {src: '~plugins/vue-scrollto', ssr: false},
     {src: '~plugins/scrolltotop', ssr: false }
   ],
@@ -74,8 +74,7 @@ module.exports = {
   */
   build: {
     vendor: [
-      'axios',
-      'skrollr'
+      'axios'
     ],
     /*
     ** Run ESLINT on save

@@ -2,10 +2,10 @@
   <section class="viewport content">
     <twitter-head-card></twitter-head-card>
     <open-graph></open-graph>
-    <div class="container">
+    <div class="container test">
       <div class="row">
         <div class="col-xs-12">
-          <nuxt-link to="/about">
+          <nuxt-link to="/images2">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
               Button
             </button>
@@ -81,5 +81,17 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+.test {
+  transform: translate3d(-100%,0,0);
+  animation: slide-in 400ms ease-out forwards;
+}
+@keyframes slide-in {
+  0% {
+    transform: translate3d(-100%,0,0);
+  }
+  100% {
+    transform: translate3d(0,0,0);
+  }
+}
 </style>

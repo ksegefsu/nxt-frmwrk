@@ -35,14 +35,8 @@
               </ul>
             </nav>
           </div>
-
       </div>
-
-
-
     </div>
-
-
   </header>
 </template>
 
@@ -106,17 +100,19 @@ header {
   background: white;
   border-bottom: 1px solid rgba(206, 206, 206, 0.44);
   // box-shadow: 0px 5px 39px -17px rgba(0,0,0,0.4);
-  box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.4);
+  // box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.4);
 }
 .headroom {
     will-change: transform;
-    transition: transform 200ms linear;
+    transition: transform 300ms linear;
 }
 .headroom--pinned {
-    transform: translateY(0%);
+    // transform: translateY(0%);
+    transform: translate3d(0,0,0);
 }
 .headroom--unpinned {
-    transform: translateY(-100%);
+    // transform: translateY(-100%);
+    transform: translate3d(0,-100%,0);
 }
 
 
